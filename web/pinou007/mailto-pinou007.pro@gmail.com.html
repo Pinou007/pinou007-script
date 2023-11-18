@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection vers l'email</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #7498fb;
+        }
+
+        .content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>
+            Redirection en cour vers l'email
+            <br>
+ 
+        </p>
+        <script>
+            window.onload = function () {
+                setTimeout(function () {
+                    window.location.href = "mailto:pinou007.pro@gmail.com";
+                }, 2000); // Attend 2 secondes, puis ouvre le client de messagerie
+                setTimeout(function () {
+                    alert("Pour me contacter professionnellement, envoyez un email à pinou007.pro@gmail.com. Seules les propositions professionnelles seront acceptées.");
+                    document.querySelector('.content').style.display = 'none'; // Cache le contenu
+                    setTimeout(function () {
+                        window.close(); // Ferme la page après 1 seconde
+                    }, 1000);
+                }, 3000); // Attend 3 secondes au total (1 seconde après l'ouverture du client de messagerie)
+            };
+        </script>
+    </div>
+</body>
+</html>
